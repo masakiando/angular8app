@@ -1,0 +1,33 @@
+::ng-deep p {
+    color: #00ffff;
+}
+
+:host {
+    display: block;
+    height: 1200px;
+    width: 600px;
+    background-color: #000000;
+  }
+
+// :host-context(.red-theme) p {
+//     color: red;
+// }
+:host-context(.red-theme) h2 {
+    color: red;
+}
+
+.is-logged-in {
+  color: blue;
+}
+
+.is-not-logged-in {
+    color: greenyellow;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+li {
+    color: #ffffff;
+}

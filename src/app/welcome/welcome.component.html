@@ -1,0 +1,78 @@
+<input type="text" name="car-color" [(ngModel)]="carColor">
+<p>car: pipe</p>
+<ul>
+  <li *ngFor="let car of cars | color: carColor;">
+    <span>color: {{car.color}}</span>
+    <span>name: {{car.name | uppercase }}</span>
+    <span>name: {{car.purchased | date: 'MMM/dd/yy' }}</span>
+  </li>
+</ul>
+<button type="button" (click)="addCar()">Add Car</button>
+<p>states: isFirst</p>
+<ul>
+  <li *ngFor="let state of getStates(); first as isFirst">
+    <span *ngIf="isFirst">{{ state }}</span>
+  </li>
+</ul>
+<p>car: isLast</p>
+<ul>
+  <li *ngFor="let car of cars; last as isLast">
+    <span *ngIf="isLast">color: {{car.color}}</span>
+    <span *ngIf="isLast">name: {{car.name}}</span>
+  </li>
+</ul>
+
+
+
+<!-- <h2>welcome works!</h2>
+<p>welcome works!</p>
+<button type="button" (click)="diplayName();"></button>
+<p>welcome works! name: {{name}}</p>
+<p>welcome works! {{getUpperCaseName()}}</p>
+<!-- syntax error -->
+<!-- <p>welcome works! {{getUpperCaseName();}}</p> -->
+<p>{{ 10 + 10 }}</p>
+
+<h2>{{ isLoggedIn() ? 'Welcome' : 'Please login' }}</h2>
+<button type="button" (click)="login()">login</button>
+<hr />
+<input type="text" *ngIf="isLoggedIn()" (input)="updateName($event)" />
+<hr />
+<input type="text" [hidden]="!isLoggedIn()" (input)="updateName($event)" />
+<hr />
+<input type="text" (input)="updateName($event)" />
+
+<h1 class="is-logged-in">html besic class</h1>
+<h1 class="{{ isLoggedInClass }}">"{{ isLoggedInClass }}"</h1>
+<h1 [class]="isLoggedInClass">"isLoggedInClass"</h1>
+<h1 [class.is-logged-in]="isLoggedIn()">"isLoggedIn()" true</h1>
+<h1 [class.is-not-logged-in]="!isLoggedIn()">"!isLoggedIn()" false</h1>
+<h1 class="{{ isLoggedIn() ? 'is-logged-in' : 'is-not-logged-in' }}">
+  "{{ isLoggedIn() ? 'is-logged-in' : 'is-not-logged-in' }}"
+</h1>
+<h1 [ngClass]="{ 'is-logged-in': isLoggedIn(), 'is-not-logged-in': !isLoggedIn() }">
+  `'is-logged-in': isLoggedIn(), 'is-not-logged-in': !isLoggedIn()}`
+</h1>
+<h1 id="welcome-message">welcom-message</h1>
+
+<h1 [style.color]="isLoggedIn() ? 'red' : 'blue'">[style.color]</h1>
+<h1 [ngStyle]="{ color: isLoggedIn() ? 'red' : 'blue' }">[ngStyle]</h1>
+-->
+
+<!-- <form>
+    <input type="text" required>
+    <button type="submit">Submit</button>
+</form>
+
+<form>
+    <input type="text" [attr.required]="true">
+    <button type="submit">Submit</button>
+</form>
+
+
+<p>states:</p>
+<ul>
+    <li *ngFor="let state of getStates(); let i = index;" >{{i}}-{{state}}</li>
+</ul> -->
+
+
