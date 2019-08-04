@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { ColorPipe } from './welcome/color.pipe';
+import { HighlightDirective } from './welcome/highlight.directive';
+import { UnlessDirective } from './welcome/unless.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     LoginComponent,
-    ColorPipe
+    ColorPipe,
+    HighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
